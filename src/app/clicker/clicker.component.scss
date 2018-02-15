@@ -1,0 +1,107 @@
+$radius: 24px;
+$button-width: 750px;
+$button-heigth: 400px;
+$button-icon-width: 66%;
+$button-icon-height: 66%;
+$button-thickness: 24px;
+$button-thickness-pressed: 4px;
+$button-color-hover-offset: #000000;
+$button-color-secondary-offset: #222222;
+$transition-time: 0.1s;
+$transition-time-counter: 0.4s;
+$button-counter-fade-opacity: 0.4;
+
+$button-color-primary: #ff6666;
+
+.clicker-container {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicker-shell {
+    display: flex;
+    width: $button-width;
+    height: $button-heigth;
+    margin-top: 12%;
+
+    background-color: $button-color-primary - $button-color-secondary-offset;
+    border-radius: $radius;
+}
+
+.clicker-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: $button-thickness;
+
+    background-color: $button-color-primary;
+    border-radius: $radius;
+
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    
+    // No select highlight
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.clicker-inner:hover {
+    background-color: $button-color-primary + $button-color-hover-offset;
+}
+.clicker-inner:active {
+    transform: translate(0px, $button-thickness - $button-thickness-pressed);
+    -webkit-transform: translate(0px, $button-thickness - $button-thickness-pressed);
+}
+
+.clicker {
+    display: flex;
+    width: $button-icon-width;
+    height: $button-icon-height;
+}
+
+.clicker-counter {
+    display: flex;
+    font-size: 32px;
+    font-weight: 900;
+    color: #fff;
+    opacity: 1;
+    font-family: Roboto, Helvetica Neue Light, Helvetica Neue,
+        Helvetica,Arial, Lucida Grande, sans-serif;
+    text-transform: uppercase;
+    margin-top: auto;
+
+    transition: all $transition-time-counter;
+    -webkit-transition: all $transition-time-counter;
+}
+
+@-webkit-keyframes clicker-counter-animation {
+    0%   { opacity: $button-counter-fade-opacity; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes clicker-counter-animation {
+    0%   { opacity: $button-counter-fade-opacity; }
+    100% { opacity: 1; }
+}
+@-o-keyframes clicker-counter-animation {
+    0%   { opacity: $button-counter-fade-opacity; }
+    100% { opacity: 1; }
+}
+@keyframes clicker-counter-animation {
+    0%   { opacity: $button-counter-fade-opacity; }
+    100% { opacity: 1; }
+}
+
+.animate-active {
+    animation: clicker-counter-animation $transition-time-counter;
+}

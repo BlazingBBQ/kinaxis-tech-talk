@@ -1,0 +1,8 @@
+<div class="clicker-container">
+    <div class="clicker-shell">
+        <div class="clicker-inner" (click)="onClick()">
+            <img class="clicker" src="./../../assets/kx.png"/>
+        </div>
+    </div>
+    <p class="clicker-counter">Button Clicked {{ numClicks }} Time{{ (numClicks == 1 ) ? "" : "s" }}!</p>
+</div>
