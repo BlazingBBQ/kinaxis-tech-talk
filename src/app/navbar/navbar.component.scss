@@ -1,0 +1,43 @@
+.nav-bar-container {
+    display: flex;
+    height: 48px;
+    width: 100%;
+    background-color: #8abea9;
+
+    &__button-wrap {
+        display: flex;
+        height: 100%;
+        margin-left: 72px;
+    }
+
+    &__button {
+        height: 100%;
+        cursor: pointer;
+    }
+    &__button:hover {
+        background-color: rgba(0, 0, 0, 0.300);
+        -webkit-transition: background-color 500ms linear;
+        -ms-transition: background-color 500ms linear;
+        transition: background-color 500ms linear;
+    }
+
+    &__button-text {
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        font-family: Roboto, Helvetica Neue Light, Helvetica Neue,
+            Helvetica,Arial, Lucida Grande, sans-serif;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__account-buttons {
+        display: flex;
+        height: 100%;
+        margin-left: auto;
+        padding-right: 16px;
+    }
+}

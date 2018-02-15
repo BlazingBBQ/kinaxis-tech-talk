@@ -1,0 +1,15 @@
+<div class="nav-bar-container">
+    <div class="nav-bar-container__button-wrap">
+        <div class="nav-bar-container__button" *ngFor="let button of navButtons" routerLink="{{button.route}}">
+            <div class="nav-bar-container__button-text">{{button.name}}</div>
+        </div>
+    </div>
+    <div class="nav-bar-container__account-buttons">
+        <div class="nav-bar-container__button" routerLink="{{login.route}}">
+            <div class="nav-bar-container__button-text">{{login.name}}</div>
+        </div>
+        <div class="nav-bar-container__button" routerLink="{{signup.route}}">
+            <div class="nav-bar-container__button-text" routerLink="{{signup.route}}">{{signup.name}}</div>
+        </div>
+    </div>
+</div>
